@@ -1,0 +1,21 @@
+spring:
+  application:
+    name: customer-service
+  datasource:
+    url: jdbc:h2:mem:customerdb;DB_CLOSE_DELAY=-1
+    username: sa
+    password: ""
+    driver-class-name: org.h2.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+
+server:
+  port: 8081
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info
